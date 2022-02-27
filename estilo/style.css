@@ -34,9 +34,9 @@ body {
 
 header {
     background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
-    min-height: 100px;
+    min-height: 150px;
     text-align: center;
-    padding-top: 35px;
+    padding-top: 40px;
 }
 
 header > h1 {
@@ -113,7 +113,7 @@ main > ul {
     list-style-position: inside;
 }
 
-main p{
+main p {
     margin: 0px 0px 20px;
     text-align: justify;
     text-indent: 30px;
