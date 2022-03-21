@@ -1,12 +1,8 @@
 @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
 
-@font-face {
-    font-family: "Roboto";
-    src: url(/fontes/Roboto-Regular.ttf) format("truetype");
-}
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
 
 :root {
     --cor0: #f7cdd1;
@@ -15,9 +11,9 @@
     --cor3: #F2A71B;
     --cor4: #F25922;
     --cor5: #A63F3F;
-
+    --cor6: #c55a5a;
+ 
     --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
-    --fonte-roboto: "Roboto", cursive;
     --fonte-open: 'Open Sans', sans-serif;
     --fonte-destaque: 'Yanone Kaffeesatz', sans-serif;
 }
@@ -34,9 +30,9 @@ body {
 
 header {
     background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
-    min-height: 150px;
+    min-height: 100px;
     text-align: center;
-    padding-top: 40px;
+    padding-top: 30px;
 }
 
 header > h1 {
@@ -60,24 +56,71 @@ header > p {
     text-shadow: 2px 2px 0px 0 rgba(0, 0, 0, 0.267);
 }
 
-nav {
+.menu {
+    width: 100%;
+    height: 50px;
     background-color: var(--cor5);
-    padding: 10px;
+    font-family: var(--fonte-padrao);
     box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.192);
 }
 
-nav > a {
-    color: var(--cor2);
-    padding: 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition-duration: .3s;
+.menu ul {
+    list-style: none;
+    position: relative;
 }
 
-nav > a:hover {
-    background-color: var(--cor3);
-    color: var(--cor5);
+.menu ul li {
+    width: 150px;
+    float: left;
+}
+
+.menu a {
+    padding: 15px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--cor5);
+    color: var(--cor0);
+    border-radius: 5px;
+}
+
+.menu ul ul {
+    position: absolute;
+    visibility: hidden;
+}
+
+.menu ul li:hover ul {
+    visibility: visible;
+}
+
+.menu a:hover {
+    background-color: var(--cor6);
+    color: white;
+}
+
+.menu ul ul li {
+    float: none;
+    border-bottom: solid 1px var(--cor0);
+}
+
+.menu ul ul li a {
+    background-color: var(--cor4);
+}
+
+label[for='bt_menu'] {
+    padding: 5px;
+    background-color: var(--cor5);
+    color: var(--cor0);
+    font-family: var(--fonte-padrao);
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+
+#bt_menu {
+    display: none;
 }
 
 main {
@@ -126,6 +169,15 @@ main img {
     width: 100%;
 }
 
+.preparo {
+    padding: 20px;
+    font-size: 1em;
+    font-weight: normal;
+    text-indent: 10px;
+    text-align: justify;
+    line-height: 1.5em;
+}
+
 footer {
     background-color: var(--cor5);
     color: white;
@@ -138,8 +190,49 @@ footer {
     padding: 0 2rem;
 }
 
-@media screen and (min-width: 50rem) {
+
     
+
+
+@media (max-width: 800px) {
+
+    label[for='bt_menu'] {
+        display: block;
+    }
+
+    #bt_menu:checked ~ .menu {
+        margin-left: 0;
+    }
+
+    .menu {
+        margin-top: 5px;
+        margin-left: -100%;
+        transition: all .4s;
+    }
+
+    .menu ul li {
+        width: 100%;
+        float: none;
+    }
+
+    .menu ul ul {
+        position: static;
+        overflow: hidden;
+        max-height: 0;
+        transition: all .4s;
+    }
+
+    .menu ul li:hover ul {
+        height: auto;
+        max-height: 200px;
+    }
+
+}
+
+@media screen and (min-width: 50rem) {
+
+    /* Estilos da Torta de maçã */
+
     .Ingredientes {
         display: table-cell;
         width: 50%;
@@ -158,4 +251,10 @@ footer {
         margin: 0;
         padding: 2rem;
     }
+
+
+
+
 }
+
+
