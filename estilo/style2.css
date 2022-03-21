@@ -3,8 +3,27 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
+.Header {
+    position: relative;
+    background-color: #8e3535;
+    height: 250px;
+}
+
+.Strap {
+    position: absolute;
+    color: #f1dec1;
+    padding: 0 30px;
+    vertical-align: middle;
+    text-align: right;
+    top: 20px;
+    font-size: 4em;
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.247);
+    
+}
+
 @media screen and (min-width: 50rem) {
     /* styles */
+    
     .IntroWrapper {
         display: table;
         table-layout: fixed;
@@ -40,6 +59,6 @@ body {
     }
 }
     
-img {
+.MoneyShot img {
     max-width: 100%;
 }
