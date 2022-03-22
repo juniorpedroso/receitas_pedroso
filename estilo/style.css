@@ -33,6 +33,7 @@ header {
     min-height: 100px;
     text-align: center;
     padding-top: 30px;
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.192);
 }
 
 header > h1 {
@@ -123,6 +124,10 @@ label[for='bt_menu'] {
     display: none;
 }
 
+label[for='bt_menu'] {
+    display: none;
+}
+
 main {
     min-width: 300px;
     max-width: 1000px;
@@ -139,7 +144,9 @@ main h1 {
     color: var(--cor5);
     font-family: var(--fonte-destaque);
     font-weight: normal;
-    font-size: 2.5em;
+    font-size: 3.5em;
+    text-align: center;
+    padding-bottom: 10px;
 }
 
 main h2 {
@@ -149,6 +156,7 @@ main h2 {
     font-weight: normal;
     text-indent: 10px;
     padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 main > ul {
@@ -170,12 +178,23 @@ main img {
 }
 
 .preparo {
-    padding: 20px;
+    padding: 0 20px 20px 20px;
     font-size: 1em;
     font-weight: normal;
-    text-indent: 10px;
+    /* text-indent: 10px; */
     text-align: justify;
-    line-height: 1.5em;
+    line-height: 2em;
+}
+
+aside {
+    background-color: var(--cor2);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.281);
+    margin: 20px;
+    line-height: 2em;
+    text-align: justify;
+    text-indent: 20px;
 }
 
 footer {
@@ -184,6 +203,8 @@ footer {
     text-align: center;
     font-size: 1em;
     pad: 5px;
+    padding: 10px;
+
 }
 
 .Ingredientes {
@@ -192,7 +213,7 @@ footer {
 
 
     
-
+/* Estilo para TELA Pequena */
 
 @media (max-width: 800px) {
 
@@ -202,12 +223,14 @@ footer {
 
     #bt_menu:checked ~ .menu {
         margin-left: 0;
+        margin-top: 0;
     }
 
     .menu {
         margin-top: 5px;
         margin-left: -100%;
         transition: all .4s;
+        margin-top: -50px;
     }
 
     .menu ul li {
@@ -231,7 +254,7 @@ footer {
 
 @media screen and (min-width: 50rem) {
 
-    /* Estilos da Torta de maçã */
+    /* Estilos da Torta de maçã em tela maior */
 
     .Ingredientes {
         display: table-cell;
@@ -245,6 +268,7 @@ footer {
     
     }
     
+
     .Imagem {
         float: right;
         width: 50%;
