@@ -219,6 +219,7 @@ footer {
 
     label[for='bt_menu'] {
         display: block;
+        /* margin-top: -50px; */
     }
 
     #bt_menu:checked ~ .menu {
